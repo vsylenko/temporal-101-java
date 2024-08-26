@@ -14,13 +14,11 @@ public class GreetingActivitiesImpl implements GreetingActivities {
         return callService("get-spanish-greeting", name);
     }
 
-    /* TODO: Implement the Activity method that was defined in the
-     * GreetingActivities interface. This method should call the microservice 
-     * to get a farewell message in Spanish. It will be identical to the
-     * method above, except that the first argument to the callService
-     * method will be "get-spanish-farewell". The name of method needs to 
-     * be the same as in the GreetingActivities interface
-     */
+    @Override
+    public String farewellInSpanish(String name) {
+        return callService("get-spanish-farewell", name);
+    }
+
     String callService(String stem, String name) {
 
         StringBuilder builder = new StringBuilder();
