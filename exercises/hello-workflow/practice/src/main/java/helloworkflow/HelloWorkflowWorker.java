@@ -13,8 +13,7 @@ public class HelloWorkflowWorker {
         WorkflowClient client = WorkflowClient.newInstance(service);
         WorkerFactory factory = WorkerFactory.newInstance(client);
 
-        // TODO: modify the statement below to specify the task queue name
-        Worker worker = factory.newWorker("TODO");
+        Worker worker = factory.newWorker("greeting-tasks");
 
         worker.registerWorkflowImplementationTypes(HelloWorkflowWorkflowImpl.class);
 
